@@ -1,1 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moon+Dance&display=swap');
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Alex';
+    src: url('./assets/fonts/AlexBrush-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Apple';
+    src: url('./assets/fonts/HomemadeApple.ttf');
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('./assets/fonts/Sofia-Regular.otf');
+}
+
+@font-face {
+    font-family: 'pearl';
+    src: url('./assets/fonts/tan-pearl-webfont.woff');
+}
+
+@theme {
+    --font-alex: 'Alex';
+    --font-apple: 'Apple';
+    --font-sofia: 'Sofia';
+    --font-cursive: 'Dancing Script';
+    --font-pearl: 'pearl';
+}
+
+@layer components {
+    .shape-overlays {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        pointer-events: none;
+    }
+
+    .blinking-cursor {
+        display: inline-block;
+        margin-left: 2px;
+        animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+
+
+}

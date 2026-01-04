@@ -1,8 +1,7 @@
-
-export const Header =()=>{
-    return(
-        <>
-        header page
-        </>
-    )
-}
+export const Header = () => {
+  return (
+    <>
+      <h1 className="text-white">header page</h1>
+    </>
+  );
+};
