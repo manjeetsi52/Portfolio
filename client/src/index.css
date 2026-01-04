@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
 @font-face {
@@ -27,6 +28,7 @@
     --font-sofia: 'Sofia';
     --font-cursive: 'Dancing Script';
     --font-pearl: 'pearl';
+    --font-poppins: 'Poppins';
 }
 
 @layer components {
@@ -37,15 +39,43 @@
         pointer-events: none;
     }
 
-    .blinking-cursor {
-        display: inline-block;
-        margin-left: 2px;
+    .contain {
+        width: 90%;
+        margin: auto;
+    }
+
+    .blink {
         animation: blink 1s steps(1) infinite;
     }
 
+
+    /* nav li items0 */
+    .navLi {
+        @apply block px-4 py-2 hover:bg-neutral-800 cursor-pointer;
+    }
+
+    /* key frames */
     @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
         50% {
             opacity: 0;
+        }
+    }
+
+    @keyframes slowBounce {
+
+        0%,
+        100% {
+            transform: translateY(0) scaleX(-1);
+        }
+
+        50% {
+            transform: translateY(-10px) scaleX(-1);
         }
     }
 
