@@ -11,7 +11,7 @@ const AppLayout = lazy(() =>
   import("./AppLayout").then((module) => ({ default: module.AppLayout }))
 );
 const Education = lazy(() =>
-  import("../pages/Education")
+  import("../pages/Education").then((module) => ({ default: module.Education }))
 );
 const Skills = lazy(() =>
   import("../pages/Skills").then((module) => ({ default: module.Skills }))

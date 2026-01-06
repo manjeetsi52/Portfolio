@@ -2,14 +2,15 @@ import { Button } from "@mui/material";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { About } from "../components/About";
-
+import { MdEmail } from "react-icons/md";
+import computer from "../assets/svgs/computer.svg"
 export const Home = () => {
   return (
     <>
       <section className="contain h-screen bg-black grid grid-cols-2 font-poppins relative">
         {/* right side */}
         <div className="text-white   flex flex-col justify-center gap-5">
-          <h1 className="text-7xl text-neutral-200 font-semibold tracking-wide ">
+          <h1 className="text-7xl text-neutral-200 font-semibold tracking-wide bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
             MERN Stack Developer
           </h1>
           <p className="text-lg w-[70%] opacity-50 tracking-wide">
@@ -29,7 +30,6 @@ export const Home = () => {
               href="https://www.linkedin.com/in/manjeet-singh-5987b027b/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn profile"
             >
               <IoLogoLinkedin className="tags" />
             </a>
@@ -37,18 +37,25 @@ export const Home = () => {
               href="https://github.com/manjeetsi52"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub profile"
             >
               <FaGithub className="tags" />
+            </a>
+            <a
+              href="mailto:manjeetsinghyk@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MdEmail className="tags" />
             </a>
           </div>
         </div>
         {/* left side */}
         <div className="text-white flex justify-center items-center relative">
           <img
-            src="./computerImage.png"
+            // src="./computerImage.png"
+            src={computer}
             alt="image"
-            className="w-120 animate-[slowBounce_3s_ease-in-out_infinite]"
+            className="w-120 transfrom -scale-x-100 animate-[slowBounce_3s_ease-in-out_infinite]"
           />
           <img
             src="./purple.png"
