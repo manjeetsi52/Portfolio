@@ -1,41 +1,58 @@
-import { createBrowserRouter } from "react-router-dom"
-import { Front } from "../pages/Front"
-import { AppLayout } from "./AppLayout"
-import { Home } from "../pages/Home"
-import { Education } from "../pages/Education"
-import { Skills } from "../pages/Skills"
-import { Project } from "../pages/Project"
-import { Contact } from "../pages/Contact"
+import { lazy } from "react";
+import { createBrowserRouter } from "react-router-dom";
+import { ErrorPage } from "../ui/ErrorElement";
+const Front = lazy(() =>
+  import("../pages/Front").then((module) => ({ default: module.Front }))
+);
+const Home = lazy(() =>
+  import("../pages/Home").then((module) => ({ default: module.Home }))
+);
+const AppLayout = lazy(() =>
+  import("./AppLayout").then((module) => ({ default: module.AppLayout }))
+);
+const Education = lazy(() =>
+  import("../pages/Education")
+);
+const Skills = lazy(() =>
+  import("../pages/Skills").then((module) => ({ default: module.Skills }))
+);
+const Project = lazy(() =>
+  import("../pages/Project").then((module) => ({ default: module.Project }))
+);
+const Contact = lazy(() =>
+  import("../pages/Contact").then((module) => ({ default: module.Contact }))
+);
 
 export const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Front/>,
+    path: "/",
+    element: <Front />,
   },
   {
-    path:'/manjeet',
-    element:<AppLayout/>,
-    children:[
-        {
-          index:true,
-          element:<Home/>
-        },
-        {
-          path:'education',
-          element:<Education/>
-        },
-        {
-          path:'skills',
-          element:<Skills/>
-        },
-        {
-          path:'projects',
-          element:<Project/>
-        },
-        {
-          path:'contact',
-          element:<Contact/>
-        },
-    ]
-  }
-])
+    path: "/manjeet",
+    element: <AppLayout />,
+    errorElement:<ErrorPage/>,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "education",
+        element: <Education />,
+      },
+      {
+        path: "skills",
+        element: <Skills />,
+      },
+      {
+        path: "projects",
+        element: <Project />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);

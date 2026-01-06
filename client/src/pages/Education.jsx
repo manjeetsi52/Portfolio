@@ -1,8 +1,8 @@
 
-export const Education =()=>{
+ const Education =()=>{
     return(
-        <section>
-        <h1 className="">Education</h1>
+        <section className="h-screen">
         </section>
     )
 }
+export default Education

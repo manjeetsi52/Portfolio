@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { LogoMark } from "./LogoMark";
+import { LogoMark } from "./ui/LogoMark";
 
 export const Header = () => {
   const navigate = useNavigate()
@@ -7,8 +7,8 @@ export const Header = () => {
     navigate('/')
   }
   return (
-    <header className="flex justify-between items-center contain text-white text-xl ">
-      <div className="flex items-center justify-center gap-2 cursor-pointer" onClick={handleNavigate}>
+    <header className=" flex pt-10 justify-between items-center contain text-white text-xl">
+      <div className="flex items-center justify-center gap-2 cursor-pointer " onClick={handleNavigate}>
         <LogoMark />
         <h1 className="text-3xl text-neutral-200 font-bold tracking-widest">
           DVLPR

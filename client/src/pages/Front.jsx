@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ShapeOverlay from "../components/ShapeOverlays";
-import { TypewriterText } from "../components/TypewriterText";
+import ShapeOverlay from "../components/gsap/ShapeOverlays";
+import { TypewriterText } from "../components/ui/TypewriterText";
 import { NAME } from "../services/Constants";
 import Button from "@mui/material/Button";
 // import { IoArrowForwardSharp } from "react-icons/io5";
@@ -51,6 +51,7 @@ export const Front = () => {
             delay={250}
             start={true}
             className={`lg:text-9xl font-pearl font-bold text-white md:text-7xl sm:text-5xl`}
+            as="h1"
           />
           <Button
             variant="outlined"
@@ -59,9 +60,9 @@ export const Front = () => {
               color: "white",
               borderColor: "white",
               borderRadius: "4rem",
-              width:'8rem',
-              padding:'1rem',
-              marginTop:'3rem',
+              width: "8rem",
+              padding: "1rem",
+              marginTop: "3rem",
               transition: "all 0.5s ease-out",
               "&:hover": {
                 backgroundColor: "white",
@@ -71,17 +72,12 @@ export const Front = () => {
               },
             }}
             className={`
-    ${
-      buttonVisible
-        ? "opacity-100 translate-y-0"
-        : "opacity-0 translate-y-4 pointer-events-none"
-    }
-  `}
-          >
+                      ${ buttonVisible
+                       ? "opacity-100 translate-y-0"
+                       : "opacity-0 translate-y-4 pointer-events-none"
+                       }
+                    `}>
             Explore
-            {/* <span className="pl-1">
-              <IoArrowForwardSharp />
-            </span> */}
           </Button>
         </div>
       </section>

@@ -54,6 +54,21 @@
         @apply block px-4 py-2 hover:bg-neutral-800 cursor-pointer;
     }
 
+    /* tag hovers */
+    .tags {
+        @apply text-4xl hover:text-purple-500 transition cursor-pointer
+    }
+
+    .masked-text {
+        font-size: 35rem;
+        font-weight: 900;
+        line-height: 1;
+        font-family: Poppins, sans-serif;
+        background: url("../public/mj.jpg") center / contain no-repeat;
+        color: transparent;
+        background-clip: text;
+    }
+
     /* key frames */
     @keyframes blink {
 

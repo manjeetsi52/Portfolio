@@ -1,11 +1,14 @@
-import { RouterProvider } from "react-router-dom"
-import { router } from "./app/router"
+import { RouterProvider } from "react-router-dom";
+import { router } from "./app/router";
+import { Suspense } from "react";
+import { Loader } from "./ui/Loader";
 
-export const App = ()=>{
-
-  return(
-    <main className="bg-black">
-    <RouterProvider router={router}/>
-    </main>
-  )
-}
+export const App = () => {
+  return (
+    <Suspense fallback={<Loader/>}>
+      <main className="bg-black">
+        <RouterProvider router={router} />
+      </main>
+    </Suspense>
+  );
+};
