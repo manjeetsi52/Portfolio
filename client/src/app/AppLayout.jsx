@@ -4,9 +4,9 @@ import { Fragment } from "react"
 
 export const AppLayout =()=>{
     return(
-        <Fragment className="relative">
+        <main className="relative">
             <Header/>
             <Outlet/>
-        </Fragment>
+        </main>
     )
 }

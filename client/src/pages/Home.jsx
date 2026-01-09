@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <>
       <section className="contain h-screen bg-black grid grid-cols-2 font-poppins relative">
-        {/* right side */}
+        {/* left side */}
         <div className="text-white   flex flex-col justify-center gap-5">
           <h1 className="text-7xl text-neutral-200 font-semibold tracking-wide bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
             MERN Stack Developer
@@ -49,13 +49,13 @@ export const Home = () => {
             </a>
           </div>
         </div>
-        {/* left side */}
+        {/* right side */}
         <div className="text-white flex justify-center items-center relative">
           <img
             // src="./computerImage.png"
             src={computer}
             alt="image"
-            className="w-120 transfrom -scale-x-100 animate-[slowBounce_3s_ease-in-out_infinite]"
+            className="w-120 transfrom -scale-x-100 animate-[slowBounce_3s_ease-in-out_infinite] z-10"
           />
           <img
             src="./purple.png"
