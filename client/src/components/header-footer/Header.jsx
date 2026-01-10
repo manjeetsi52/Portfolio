@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { LogoMark } from "./ui/LogoMark";
+import { LogoMark } from "../ui/LogoMark";
 
 export const Header = () => {
   const navigate = useNavigate()

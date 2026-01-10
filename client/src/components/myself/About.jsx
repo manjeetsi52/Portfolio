@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+import { FaArrowCircleDown } from "react-icons/fa";
 
 export const About = () => {
   return (
@@ -15,7 +17,7 @@ export const About = () => {
         pt-20"
     >
       {/* Left content */}
-      <div className="relative z-10 space-y-4">
+      <div className="relative z-10 space-y-4 -mt-10">
         <h1 className="text-4xl md:text-5xl font-semibold">
           Hi, I’m <span className="text-fuchsia-500 ">Manjeet</span>
         </h1>
@@ -28,6 +30,13 @@ export const About = () => {
           JavaScript Enthusiast / Creative Problem Solver
         </p>
       </div>
+      {/* arrow button */}
+       <Button
+              variant="text"
+              className="!absolute !top-150 !right-0 !text-3xl !text-purple-500 !font-semibold !border-purple-500 !rounded-2xl !hover:bg-white"
+            >
+              <a href="#extra"><FaArrowCircleDown/></a>
+            </Button>
 
       {/* About text */}
       <div className="relative z-10 max-w-xl text-neutral-300 leading-relaxed">

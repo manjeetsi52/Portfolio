@@ -1,9 +1,11 @@
 import { Button } from "@mui/material";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
-import { About } from "../components/About";
+import { About } from "../components/myself/About";
 import { MdEmail } from "react-icons/md";
 import computer from "../assets/svgs/computer.svg"
+import { Extra } from "../components/myself/Extra";
+
 export const Home = () => {
   return (
     <>
@@ -72,7 +74,10 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      {/* about  */}
       <About/>
+      {/* extra */}
+      <Extra/>
     </>
   );
 };

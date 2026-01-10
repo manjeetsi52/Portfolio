@@ -95,3 +95,121 @@ export const educationData = [
     ],
   },
 ];
+
+// src/data/skills.js
+export const skills = [
+  {
+    id: 1,
+    name: "C++",
+    img: "/skillsImages/c++.svg",
+  },
+ 
+  {
+    id: 2,
+    name: "HTML",
+    img: "/skillsImages/html.svg",
+  },
+  {
+    id: 3,
+    name: "CSS",
+    img: "/skillsImages/css.svg",
+  },
+  {
+    id: 4,
+    name: "JavaScript",
+    img: "/skillsImages/javascript.svg",
+  },
+   {
+    id: 5,
+    name: "React",
+    img: "/skillsImages/react.svg",
+  },
+  {
+    id: 6,
+    name: "Redux",
+    img: "/skillsImages/redux.svg",
+  },
+  {
+    id: 7,
+    name: "Tailwind",
+    img: "/skillsImages/tailwind.svg",
+  },
+  {
+    id: 8,
+    name: "Node.js",
+    img: "/skillsImages/node.svg",
+  },
+  {
+    id: 9,
+    name: "Express.js",
+    img: "/skillsImages/express.svg",
+  },
+  {
+    id: 10,
+    name: "MongoDB",
+    img: "/skillsImages/mongodb.svg",
+  },
+   {
+    id: 11,
+    name: "Mongoose",
+    img: "/skillsImages/mongoose.svg",
+  },
+  {
+    id: 12,
+    name: "VS Code",
+    img: "/skillsImages/vscode.svg",
+  },
+  {
+    id: 13,
+    name: "Postman",
+    img: "/skillsImages/postman.svg",
+  },
+  {
+    id: 14,
+    name: "GitHub",
+    img: "/skillsImages/github.svg",
+  },
+   {
+    id: 15,
+    name: "Linux",
+    img: "/skillsImages/linux.svg",
+  },
+   {
+    id: 16,
+    name: "npm",
+    img: "/skillsImages/npm.svg",
+  },
+   {
+    id: 17,
+    name: "react query",
+    img: "/skillsImages/rquery.svg",
+  },
+];
+
+
+// extra
+export const sketches = [
+  {
+    title: "Sketch-1",
+    image: "/extra/img1.jpeg",
+  },
+  {
+    title: "Sketch-2",
+    image: "/extra/img2.jpeg",
+  },
+  {
+    title: "sketch-3",
+    image: "/extra/img3.jpeg",
+  },
+  {
+    title: "Sketch-4",
+     image: "/extra/img4.jpeg",
+  },
+  {
+    title: "Sketch-5",
+    image: "/extra/img5.jpeg",
+  },
+];
+
+// 
+export const para = "TThese sketches demonstrate my creativity, design sense, and attention to detail, complementing my technical skills with visual storytelling. Displaying them interactively allows visitors to engage with my work dynamically, highlighting both artistic and front-end development abilities."

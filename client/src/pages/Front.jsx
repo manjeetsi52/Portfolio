@@ -30,7 +30,7 @@ export const Front = () => {
     <>
       <ShapeOverlay ref={overlayRef} />
 
-      <section className="h-screen bg-black text-white flex justify-center items-center relative z-10">
+      <section className="min-h-screen min-w-full bg-black text-white flex justify-center items-center relative z-10">
         <div className="text-center space-y-4 ">
           <div className="absolute inset-0">
             {/* background animation */}

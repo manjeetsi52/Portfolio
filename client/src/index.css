@@ -59,6 +59,37 @@
         @apply text-4xl hover:text-purple-500 transition cursor-pointer
     }
 
+    /* HTML: <div class="loader"></div> */
+    .loader {
+        width: 60px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+        background:
+            var(--_g) 0% 50%,
+            var(--_g) 50% 50%,
+            var(--_g) 100% 50%;
+        background-size: calc(100%/3) 50%;
+        animation: l3 1s infinite linear;
+    }
+
+    @keyframes l3 {
+        20% {
+            background-position: 0% 0%, 50% 50%, 100% 50%
+        }
+
+        40% {
+            background-position: 0% 100%, 50% 0%, 100% 50%
+        }
+
+        60% {
+            background-position: 0% 50%, 50% 100%, 100% 0%
+        }
+
+        80% {
+            background-position: 0% 50%, 50% 50%, 100% 100%
+        }
+    }
+
     .masked-text {
         font-size: 35rem;
         font-weight: 900;
@@ -68,7 +99,9 @@
         color: transparent;
         background-clip: text;
     }
-    .anchor{
+
+
+    .anchor {
         @apply text-gray-500 hover:text-gray-600 active:text-gray-700
     }
 
@@ -80,12 +113,15 @@
     .reveal-active {
         @apply opacity-100 translate-y-0;
     }
-    .animeImage{
+
+    .animeImage {
         @apply animate-[slowBounce_3s_ease-in-out_infinite]
     }
-    .clipText{
+
+    .clipText {
         @apply bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent
     }
+
     /* key frames */
     @keyframes blink {
 
@@ -110,26 +146,41 @@
             transform: translateY(-10px) scaleX(-1);
         }
     }
-    
+
 
     @keyframes flipContinuous {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
+        0% {
+            transform: rotateY(0deg);
+        }
 
-.flip-continuous {
-  width: 6rem;
-  height: 6rem;
-  background-color: white;
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
 
-  animation: flipContinuous 4s linear infinite;
-  transform-origin: center;
-  will-change: transform;
-}
+    .flip-continuous {
+        width: 6rem;
+        height: 6rem;
+        background-color: white;
+
+        animation: flipContinuous 4s linear infinite;
+        transform-origin: center;
+        will-change: transform;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee linear infinite;
+    }
 
 
 }
