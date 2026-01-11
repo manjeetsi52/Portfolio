@@ -213,3 +213,52 @@ export const sketches = [
 
 // 
 export const para = "TThese sketches demonstrate my creativity, design sense, and attention to detail, complementing my technical skills with visual storytelling. Displaying them interactively allows visitors to engage with my work dynamically, highlighting both artistic and front-end development abilities."
+
+
+// project data 
+export const projectsData = [
+  {
+    id: 1,
+    index: "01",
+    title: "Expense Tracker",
+    description:
+      "Built a client-side expense tracking application using HTML, CSS, and JavaScript. Implemented expense categorization, real-time balance updates, and persistent data storage using browser localStorage.",
+    image: "/project/expenseTracker.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://expensetrackmj.netlify.app",
+    githubUrl: "https://github.com/manjeetsi52/Expense-Tracker",
+  },
+  {
+    id: 2,
+    index: "02",
+    title: "CoffeeHub",
+    description:
+      "Designed and developed a responsive coffee brand landing page with a strong emphasis on CSS layouts, animations, and visual hierarchy. Focused on clean typography, modern UI patterns, and smooth user interactions.",
+    image: "/project/coffehub.png",
+    tech: ["HTML", "CSS","Javascript"],
+    liveUrl: "https://coffeehubmj.netlify.app",
+    githubUrl: "https://github.com/manjeetsi52/Coffee-Website",
+  },
+  {
+    id: 3,
+    index: "03",
+    title: "Authify",
+    description:
+      "Developed a full-stack authentication and authorization system with secure login, protected routes, and role-based access control. Integrated Google OAuth for seamless social authentication and implemented robust session handling.",
+    image: "/project/authify.png",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Google OAuth"],
+    liveUrl: "https://authify-fawn.vercel.app",
+    githubUrl: "https://github.com/manjeetsi52/Authify",
+  },
+  {
+    id: 4,
+    index: "04",
+    title: "Developer Portfolio",
+    description:
+      "Created a personal developer portfolio using React and Tailwind CSS, enhanced with GSAP animations for smooth scroll-based transitions. Designed a dark-themed, performance-focused UI to showcase projects and technical skills.",
+    image: "/project/portfolio.png",
+    tech: ["React", "Tailwind CSS", "GSAP"],
+    liveUrl: "https://your-portfolio-link.com",
+    githubUrl: "https://github.com/manjeetsi52/Portfolio",
+  },
+];

@@ -6,7 +6,7 @@ import { Loader } from "./ui/Loader";
 export const App = () => {
   return (
     <Suspense fallback={<Loader/>}>
-      <main className="bg-black">
+      <main className="bg-black  overflow-hidden">
         <RouterProvider router={router} />
       </main>
     </Suspense>
