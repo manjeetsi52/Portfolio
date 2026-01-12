@@ -258,7 +258,7 @@ export const projectsData = [
       "Created a personal developer portfolio using React and Tailwind CSS, enhanced with GSAP animations for smooth scroll-based transitions. Designed a dark-themed, performance-focused UI to showcase projects and technical skills.",
     image: "/project/portfolio.png",
     tech: ["React", "Tailwind CSS", "GSAP"],
-    liveUrl: "https://your-portfolio-link.com",
+    liveUrl: "https://portfolio-silk-seven-78.vercel.app",
     githubUrl: "https://github.com/manjeetsi52/Portfolio",
   },
 ];
