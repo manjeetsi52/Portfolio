@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { ErrorPage } from "../ui/ErrorElement";
+import {ErrorPage} from '../components/ErrorElement.jsx'
 const Front = lazy(() =>
   import("../pages/Front").then((module) => ({ default: module.Front }))
 );

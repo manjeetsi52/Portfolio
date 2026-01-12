@@ -12,17 +12,13 @@ export const Certification = () => {
 
   const closeModal = () => setSelectedCert(null);
 
-//   useEffect(() => {
-//     if (selectedCert) console.log(selectedCert);
-//   }, [selectedCert]);
-
   return (
     <>
-      <div className="flex flex-wrap gap-4 p-5">
+      <div className="flex flex-wrap gap-4 lg:px-22 lg:pt-10 pt-5">
         {certifications.map(({ id, image, title, issuer, description }) => (
           <div
             key={id}
-            className="w-96 rounded-2xl overflow-hidden bg-black text-white border border-neutral-500"
+            className="w-96 rounded-xl md:rounded-2xl overflow-hidden bg-black text-white border border-neutral-500"
           >
             {/* Image */}
             <div

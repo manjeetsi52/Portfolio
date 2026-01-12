@@ -1,7 +1,8 @@
 import { RouterProvider } from "react-router-dom";
 import { router } from "./app/router";
 import { Suspense } from "react";
-import { Loader } from "./ui/Loader";
+import { Loader } from "./components/Loader";
+
 
 export const App = () => {
   return (

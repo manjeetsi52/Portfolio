@@ -2,9 +2,9 @@ import { skills } from "../assets/api/data";
 export const SkillIcons = () => {
   return (
     <section id="skills" className="h-fit w-full flex items-center justify-center">
-      <div className="w-full h-fit p-10">
+      <div className="w-full h-fit md:p-10 pt-10">
         {/* content */}
-        <div className="flex flex-wrap gap-10 p-10 rounded-2xl  items-center">
+        <div className="flex flex-wrap gap-5 md:gap-10 md:p-10 rounded-2xl md:items-center">
           {skills.map((elem) => {
             const { id, img, name } = elem;
 
@@ -14,7 +14,8 @@ export const SkillIcons = () => {
                 title={name}
                 className="
                   group
-                  w-40 h-40
+                  size-36
+                  md:size-40
                   rounded-2xl
                   border border-neutral-800
                  bg-neutral-950
@@ -28,8 +29,9 @@ export const SkillIcons = () => {
                   src={img}
                   alt={name}
                   className="
-                    w-20
-                    grayscale
+                    w-18
+                    md:w-20
+                    md:grayscale
                     transition-all duration-300
                     group-hover:grayscale-0
                     group-hover:-translate-y-2

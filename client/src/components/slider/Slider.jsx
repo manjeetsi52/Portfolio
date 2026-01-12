@@ -3,7 +3,7 @@ export const MarqueeText = ({
   speed = 10,
 })=>{
     return (
-        <div className="relative w-full overflow-hidden border-y border-neutral-800">      
+        <div className="relative w-full overflow-hidden border-y border-neutral-800 ">      
         <div
         className="flex whitespace-nowrap py-5 animate-marquee hover:[animation-play-state:paused]"
         style={{ animationDuration: `${speed}s` }}

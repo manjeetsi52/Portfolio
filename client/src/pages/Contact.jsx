@@ -4,7 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { Button } from "@mui/material";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-import { MarqueeText } from "../slider/Slider.jsx";
+import { MarqueeText } from "../components/slider/Slider.jsx";
 import { useState } from "react";
 
 export const Contact = () => {
@@ -34,36 +34,36 @@ export const Contact = () => {
       </div>
 
       {/* Main Content */}
-      <div className="contain grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
+      <div className="md:contain grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative ">
         
         {/* Left */}
         <div className="flex flex-col gap-6 justify-center">
-          <h1 className="text-6xl font-semibold tracking-wide bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-wide bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent text-center md:text-left">
             Manjeet Singh
           </h1>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 justify-center md:justify-baseline">
             <a href="https://www.linkedin.com/in/manjeet-singh-5987b027b/" target="_blank">
-              <IoLogoLinkedin className="text-3xl text-zinc-400 hover:text-fuchsia-500 transition" />
+              <IoLogoLinkedin className="md:text-3xl text-2xl text-zinc-400 hover:text-fuchsia-500 transition" />
             </a>
             <a href="https://github.com/manjeetsi52" target="_blank">
-              <FaGithub className="text-3xl text-zinc-400 hover:text-fuchsia-500 transition" />
+              <FaGithub className="md:text-3xl text-2xl text-zinc-400 hover:text-fuchsia-500 transition" />
             </a>
             <a href="mailto:manjeetsinghyk@gmail.com">
-              <MdEmail className="text-3xl text-zinc-400 hover:text-fuchsia-500 transition" />
+              <MdEmail className="md:text-3xl text-2xl text-zinc-400 hover:text-fuchsia-500 transition" />
             </a>
           </div>
           <img
             src="/purple.png"
             alt="image"
-            className="absolute w-32 top-80 left-120 animate-[slowBounce_3s_ease-in-out_infinite]"
+            className="absolute w-32 top-80 left-120 animate-[slowBounce_3s_ease-in-out_infinite] hidden md:visible"
           />
          
         </div>
 
         {/* Right */}
         <div className="flex justify-center">
-          <form onSubmit={handleSubmit} className="w-full max-w-md p-10 rounded-2xl border border-zinc-700 flex flex-col gap-6 bg-black/40 backdrop-blur hover:border-zinc-500 transition">
+          <form onSubmit={handleSubmit} className="w-full max-w-md p-5 md:p-10 rounded-xl md:rounded-2xl border border-zinc-700 flex flex-col gap-6 bg-black/40 backdrop-blur hover:border-zinc-500 transition">
             {/* <h2 className="text-2xl font-semibold text-center">
               Get in touch
             </h2> */}

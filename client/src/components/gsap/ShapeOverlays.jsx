@@ -84,7 +84,7 @@ const ShapeOverlay = forwardRef((_, ref) => {
 
   return (
     <svg
-      className="shape-overlays"
+      className="shape-overlays fixed inset-0 w-screen h-screen z-[9999]"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
     >

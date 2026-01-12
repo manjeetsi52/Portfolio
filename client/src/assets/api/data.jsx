@@ -60,7 +60,7 @@ export const certifications = [
 export const educationData = [
   {
     id: 1,
-    img: "/gec.webp",
+    img: "/education/gec.webp",
     institution: "Government Engineering College, Bharatpur",
     course: "B.Tech in Computer Science & Engineering",
     year: "2022 – 2026",
@@ -73,7 +73,7 @@ export const educationData = [
   },
   {
     id: 2,
-    img: "/cbse.png",
+    img: "/education/cbse.png",
     institution: "Senior Secondary Education",
     course: "Class XII",
     year: "2021 – 2022",
@@ -84,7 +84,7 @@ export const educationData = [
   },
   {
     id: 3,
-    img: "/cbse.png",
+    img: "/education/cbse.png",
     institution: "Secondary Education",
     course: "Class X",
     year: "2019 – 2020",
@@ -262,3 +262,12 @@ export const projectsData = [
     githubUrl: "https://github.com/manjeetsi52/Portfolio",
   },
 ];
+
+// nav items 
+export const navItems = [
+    { name: "Home", path: "/manjeet" },
+    { name: "Education", path: "/manjeet/education" },
+    { name: "Skills", path: "/manjeet/skills" },
+    { name: "Projects", path: "/manjeet/projects" },
+    { name: "Contact", path: "/manjeet/contact" },
+  ];

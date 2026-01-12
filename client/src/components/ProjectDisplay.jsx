@@ -1,6 +1,6 @@
 
 import { projectsData } from "../assets/api/data";
-import { ProjectCard } from "../ui/ProjectCard";
+import { ProjectCard } from "../components/ProjectCard.jsx";
 
 export const ProjectDisplay = () => {
 
@@ -11,7 +11,7 @@ export const ProjectDisplay = () => {
       
     >
       <div
-        className="flex flex-col gap-20 h-full"
+        className="flex flex-col gap-10 md:gap-20 h-full"
       >
         {projectsData.map((project) => (
           <div key={project.id} className="project-card">

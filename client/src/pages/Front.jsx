@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ShapeOverlay from "../components/gsap/ShapeOverlays";
 import { TypewriterText } from "../components/ui/TypewriterText";
-import { NAME } from "../services/Constants";
 import Button from "@mui/material/Button";
+import { NAME } from "../assets/api/Constants";
 // import { IoArrowForwardSharp } from "react-icons/io5";
 
 export const Front = () => {
@@ -31,7 +31,7 @@ export const Front = () => {
       <ShapeOverlay ref={overlayRef} />
 
       <section className="min-h-screen min-w-full bg-black text-white flex justify-center items-center relative z-10">
-        <div className="text-center space-y-4 ">
+        <div className="text-center space-y-4">
           <div className="absolute inset-0">
             {/* background animation */}
             {[...Array(100)].map((_, i) => (
@@ -50,7 +50,7 @@ export const Front = () => {
             text={NAME}
             delay={250}
             start={true}
-            className={`lg:text-9xl font-pearl font-bold text-white md:text-7xl sm:text-5xl`}
+            className={`font-pearl font-bold text-white lg:text-9xl md:text-7xl sm:text-5xl text-3xl `}
             as="h1"
           />
           <Button
@@ -60,23 +60,28 @@ export const Front = () => {
               color: "white",
               borderColor: "white",
               borderRadius: "4rem",
-              width: "8rem",
-              padding: "1rem",
-              marginTop: "3rem",
-              transition: "all 0.5s ease-out",
+              px: { xs: 3, md: 4 }, // responsive padding
+              py: { xs: 1.2, md: 1.5 },
+              mt: { xs: 2, md: 4 },
+              transition: "background-color 0.3s ease, color 0.3s ease",
               "&:hover": {
                 backgroundColor: "white",
                 color: "black",
                 borderColor: "black",
-                fontWeight: "bold",
+                fontWeight: 600,
               },
             }}
             className={`
-                      ${ buttonVisible
-                       ? "opacity-100 translate-y-0"
-                       : "opacity-0 translate-y-4 pointer-events-none"
-                       }
-                    `}>
+    w-fit
+    text-sm md:text-base
+    transition-all duration-500 ease-out
+    ${
+      buttonVisible
+        ? "opacity-100 translate-y-0"
+        : "opacity-0 translate-y-4 pointer-events-none"
+    }
+  `}
+          >
             Explore
           </Button>
         </div>

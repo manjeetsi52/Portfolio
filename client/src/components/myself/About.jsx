@@ -33,7 +33,7 @@ export const About = () => {
       {/* arrow button */}
        <Button
               variant="text"
-              className="!absolute !top-150 !right-0 !text-3xl !text-purple-500 !font-semibold !border-purple-500 !rounded-2xl !hover:bg-white"
+              className="!absolute !top-150 !right-0 !text-3xl !text-purple-500 !font-semibold !border-purple-500 !rounded-2xl !hover:bg-white hidden! md:visible!"
             >
               <a href="#extra"><FaArrowCircleDown/></a>
             </Button>
@@ -68,15 +68,16 @@ export const About = () => {
       >
         M
       </h1>
+      {/* decorations */}
       <img
-        src="cube.png"
+        src="/decoration/cube.png"
         alt="cube"
-        className="absolute size-40 bottom-10 left-30 animate-pulse"
+        className="absolute size-40 bottom-10 left-30 animate-none opacity-0 md:opacity-100 md:animate-pulse"
       />
       <img
-        src="./purple.png"
+        src="/decoration/purple.png"
         alt="image"
-        className="absolute w-50 top-2 right-86"
+        className="absolute w-50 top-2 right-86 opacity-0 md:opacity-100"
       />
     </section>
   );
