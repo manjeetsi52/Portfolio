@@ -52,8 +52,10 @@ export const certifications = [
     title: "Academic Excellence Certificate",
     description:
       "Awarded an Academic Excellence Certificate in recognition of consistent academic performance, discipline, and dedication to learning.",
-    image: "/certifications/pythonvois.png",
+    // image: "/certifications/pythonvois.png",
+    image: "/certifications/pythonvoiss.png",
     issuer: "Academic Institution",
+    // to be collected from institution
   },
 ];
 
