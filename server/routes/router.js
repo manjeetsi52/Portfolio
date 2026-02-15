@@ -7,4 +7,4 @@ route.get('/',(req,res)=>{
     res.status(200).send('ok')
 })
 
-route.post('/contact',globalLimiter,handleContact)
+route.post('/manjeet/contact',globalLimiter,handleContact)
