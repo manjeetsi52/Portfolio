@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moon+Dance&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Alex';
+    src: url('./assets/fonts/AlexBrush-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Apple';
+    src: url('./assets/fonts/HomemadeApple.ttf');
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('./assets/fonts/Sofia-Regular.otf');
+}
+
+@font-face {
+    font-family: 'pearl';
+    src: url('./assets/fonts/tan-pearl-webfont.woff');
+}
+
+@theme {
+    --font-alex: 'Alex';
+    --font-apple: 'Apple';
+    --font-sofia: 'Sofia';
+    --font-cursive: 'Dancing Script';
+    --font-pearl: 'pearl';
+    --font-poppins: 'Poppins';
+}
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+    .shape-overlays {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        pointer-events: none;
+    }
+
+    .contain {
+        width: 90%;
+        margin: auto;
+    }
+
+    .blink {
+        animation: blink 1s steps(1) infinite;
+    }
+
+
+    /* nav li items0 */
+    .navLi {
+        @apply block px-4 py-2 hover:bg-neutral-800 cursor-pointer;
+    }
+
+    /* tag hovers */
+    .tags {
+        @apply text-4xl hover:text-purple-500 transition cursor-pointer
+    }
+
+    /* HTML: <div class="loader"></div> */
+    .loader {
+        width: 60px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+        background:
+            var(--_g) 0% 50%,
+            var(--_g) 50% 50%,
+            var(--_g) 100% 50%;
+        background-size: calc(100%/3) 50%;
+        animation: l3 1s infinite linear;
+    }
+
+    @keyframes l3 {
+        20% {
+            background-position: 0% 0%, 50% 50%, 100% 50%
+        }
+
+        40% {
+            background-position: 0% 100%, 50% 0%, 100% 50%
+        }
+
+        60% {
+            background-position: 0% 50%, 50% 100%, 100% 0%
+        }
+
+        80% {
+            background-position: 0% 50%, 50% 50%, 100% 100%
+        }
+    }
+
+    .masked-text {
+        font-size: 35rem;
+        font-weight: 900;
+        line-height: 1;
+        font-family: Poppins, sans-serif;
+        background: url("../public/about/mj.jpg") center / contain no-repeat;
+        color: transparent;
+        background-clip: text;
+    }
+
+
+    .anchor {
+        @apply text-gray-500 hover:text-gray-600 active:text-gray-700
+    }
+
+    /* scroll animation */
+    .reveal {
+        @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    }
+
+    .reveal-active {
+        @apply opacity-100 translate-y-0;
+    }
+
+    .animeImage {
+        @apply animate-[slowBounce_3s_ease-in-out_infinite]
+    }
+
+    .clipText {
+        @apply bg-gradient-to-bl from-violet-100 via-fuchsia-500 to-fuchsia-700 bg-clip-text text-transparent
+    }
+
+    /* key frames */
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes slowBounce {
+
+        0%,
+        100% {
+            transform: translateY(0) scaleX(-1);
+        }
+
+        50% {
+            transform: translateY(-10px) scaleX(-1);
+        }
+    }
+
+
+    @keyframes flipContinuous {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .flip-continuous {
+        width: 6rem;
+        height: 6rem;
+        background-color: white;
+
+        animation: flipContinuous 4s linear infinite;
+        transform-origin: center;
+        will-change: transform;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee linear infinite;
+    }
+
+    /* input */
+    .input {
+        @apply w-full bg-transparent border border-zinc-700 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-fuchsia-500 transition;
+    }
+
+
+
+}
