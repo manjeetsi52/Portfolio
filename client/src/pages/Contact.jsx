@@ -6,6 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Toaster, toast } from "sonner";
 import { MarqueeText } from "../components/slider/Slider.jsx";
 import { useState } from "react";
+import axios from "axios";
 const initialFormData = {
   name: "",
   email: "",
@@ -19,12 +20,19 @@ export const Contact = () => {
       return { ...prev, [name]: value };
     });
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    toast.success("Message sent successfully");
-    setFormData(initialFormData);
-    // send data to backend and send email to me
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log(formData)
+
+      const res = await axios.post(`http://localhost:8080/contact`,formData)
+      if(res.status==200){
+        toast.success(res?.data.message);
+        setFormData(initialFormData);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -77,6 +85,7 @@ export const Contact = () => {
               type="text"
               placeholder="Your name"
               name="name"
+              required
               className="input"
               value={formData.name}
               onChange={handleClick}
@@ -85,6 +94,7 @@ export const Contact = () => {
               type="email"
               placeholder="Your email"
               name="email"
+              required
               className="input"
               value={formData.email}
               onChange={handleClick}
@@ -92,6 +102,7 @@ export const Contact = () => {
             <textarea
               placeholder="Your message"
               rows="4"
+              required
               name="message"
               className="input resize-none"
               value={formData.message}
