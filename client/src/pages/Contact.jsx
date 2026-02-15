@@ -25,7 +25,7 @@ export const Contact = () => {
       e.preventDefault();
       console.log(formData)
 
-      const res = await axios.post(`http://localhost:8080/contact`,formData)
+      const res = await axios.post(`https://portfolio-nacaufd86-manjeetsi52s-projects.vercel.app/manjeet/contact`,formData)
       if(res.status==200){
         toast.success(res?.data.message);
         setFormData(initialFormData);
